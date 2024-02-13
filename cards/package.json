@@ -2,6 +2,7 @@
   "name": "cards",
   "dependencies": {
     "@fontsource/roboto": "^5.0.8",
+    "clsx": "^2.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -35,7 +36,7 @@
     "typescript": "^5.2.2",
     "vite": "^5.1.0"
   },
-  "scripts":{
+  "scripts": {
     "format": "prettier --write src",
     "lint": "eslint src --ext .jsx,.js,.tsx,.ts  --no-error-on-unmatched-pattern --fix && stylelint --fix src/{,*/}*.{scss,css} --allow-empty-input",
     "storybook": "storybook dev -p 6006",
