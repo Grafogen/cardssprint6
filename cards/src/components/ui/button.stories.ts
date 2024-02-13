@@ -25,6 +25,14 @@ export const Primary: Story = {
   },
 }
 
+export const PrimaryWithSvg: Story = {
+  args: {
+    children: 'Primary Button',
+    disabled: false,
+    variant: 'primary',
+  },
+}
+
 export const Secondary: Story = {
   args: {
     children: 'Secondary Button',
@@ -35,7 +43,7 @@ export const Secondary: Story = {
 
 export const FullWidth: Story = {
   args: {
-    children: 'Full Width Primary Button',
+    children: ' Primary Button',
     disabled: false,
     fullWidth: true,
     variant: 'primary',
