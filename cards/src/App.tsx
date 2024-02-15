@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui'
+import { CheckBox } from '@/components/checkbox'
 
 export function App() {
   return (
@@ -6,6 +7,7 @@ export function App() {
       <Button as={'a'} href={'http://google.com'} variant={'primary'}>
         Hello
       </Button>
+      <CheckBox checked={true} />
     </div>
   )
 }

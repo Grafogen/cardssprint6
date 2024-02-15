@@ -1,6 +1,8 @@
-import { Component } from 'react'
+import { Component, ElementType } from 'react'
 
-export type CardType = {}
+export type CardType<T extends ElementType> = {
+  as: T
+}
 
 export function Card() {
   return <Component />
