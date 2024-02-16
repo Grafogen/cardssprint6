@@ -15,21 +15,23 @@ export const CheckBox = (props: CheckboxProps) => {
   return (
     <form>
       <div className={s.container}>
-        <Checkbox.Root
-          disabled={disabled}
-          checked={checked}
-          className={`${s.root} ${className ? s[className] : ''} `}
-          defaultChecked
-          id="c1"
-        >
-          {checked ? (
-            <Checkbox.Indicator className={s.indicator}>
-              <CheckIcon />
-            </Checkbox.Indicator>
-          ) : (
-            ''
-          )}
-        </Checkbox.Root>
+        <div className={`${className && !disabled ? s[className] : ''}`}>
+          <Checkbox.Root
+            disabled={disabled}
+            checked={checked}
+            className={`${s.root} `}
+            defaultChecked
+            id="c1"
+          >
+            {checked ? (
+              <Checkbox.Indicator className={s.indicator}>
+                <CheckIcon />
+              </Checkbox.Indicator>
+            ) : (
+              ''
+            )}
+          </Checkbox.Root>
+        </div>
         <label className={s.Label}>{label}</label>
       </div>
     </form>

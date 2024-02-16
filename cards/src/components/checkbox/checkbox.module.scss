@@ -28,7 +28,6 @@
   top: 3px;
   left: 3px;
 
-
   background-color: var(--color-bg-primary);
   border: 2px solid var(--color-light-900);
   border-radius: 2px;
@@ -64,7 +63,7 @@
   width: 36px;
   height: 36px;
 
-  background-color: rgb(255 255 255 / 0%);
+  background-color: var(--color-dark-100);
   border-radius: 50%;
 
   &.disabled {
@@ -75,11 +74,11 @@
     background-color: var(--color-dark-500);
   }
 
-  &:focus-within,
-  &:hover:not(.disabled),
-  &:hover .root:not([data-state='checked']) {
-    background-color: var(--color-dark-100);
-  }
+  //&:focus-within,
+  //&:hover:not(.disabled),
+  //&:hover .root:not([data-state='checked']) {
+  //  background-color: var(--color-dark-100);
+  //}
 }
 
 .indicator {
