@@ -1,5 +1,6 @@
-import { Button } from '@/components/ui'
+import { Button } from '@/components/ui/button'
 import { CheckBox } from '@/components/checkbox'
+import { Input } from '@/components/ui/input'
 
 export function App() {
   return (
@@ -8,6 +9,7 @@ export function App() {
         Hello
       </Button>
       <CheckBox checked={true} />
+      <Input />
     </div>
   )
 }
