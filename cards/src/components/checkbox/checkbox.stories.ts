@@ -16,7 +16,7 @@ export const Box: Story = {
     checked: true,
     label: 'click',
     disabled: false,
-    //className: 'buttonWrapper',
+    className: 'buttonWrapper',
   },
 }
 

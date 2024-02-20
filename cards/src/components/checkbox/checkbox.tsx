@@ -1,7 +1,8 @@
 import React, { ReactNode } from 'react'
 import * as Checkbox from '@radix-ui/react-checkbox'
-import { CheckIcon } from '@radix-ui/react-icons'
 import s from './checkbox.module.scss'
+import Check from '@/svgs/check'
+import { Typography } from '@/components/typography'
 
 export type CheckboxProps = {
   checked: boolean
@@ -15,24 +16,26 @@ export const CheckBox = (props: CheckboxProps) => {
   return (
     <form>
       <div className={s.container}>
-        <div className={`${className && !disabled ? s[className] : ''}`}>
-          <Checkbox.Root
-            disabled={disabled}
-            checked={checked}
-            className={`${s.root} `}
-            defaultChecked
-            id="c1"
-          >
-            {checked ? (
-              <Checkbox.Indicator className={s.indicator}>
-                <CheckIcon />
-              </Checkbox.Indicator>
-            ) : (
-              ''
-            )}
-          </Checkbox.Root>
-        </div>
-        <label className={s.Label}>{label}</label>
+        <Typography variant="body2" className={s.label} as={'label'}>
+          <div className={`${className && !disabled ? s[className] : ''}`}>
+            <Checkbox.Root
+              disabled={disabled}
+              checked={checked}
+              className={`${s.root} `}
+              defaultChecked
+              id="c1"
+            >
+              {checked ? (
+                <Checkbox.Indicator className={s.indicator}>
+                  <Check />
+                </Checkbox.Indicator>
+              ) : (
+                ''
+              )}
+            </Checkbox.Root>
+          </div>
+          {label}
+        </Typography>
       </div>
     </form>
   )

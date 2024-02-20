@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { CheckBox } from '@/components/checkbox'
-import { Input } from '@/components/ui/input'
+import { Input } from '@/components/ui/textfield'
 
 export function App() {
   return (

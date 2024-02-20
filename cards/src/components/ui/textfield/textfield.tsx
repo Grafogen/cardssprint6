@@ -3,9 +3,9 @@ import { ComponentProps, ComponentPropsWithoutRef, forwardRef, useState } from '
 import { clsx } from 'clsx'
 
 import { Typography } from '../../typography'
-import VisibilityOff from '@/svgs/visibility-off'
-import s from './input.module.scss'
-import Eye from '@/svgs/eye'
+import VisibilityOff from '../../../svgs/visibility-off'
+import s from './textfield.module.scss'
+import Eye from '../../../svgs/eye'
 
 export type TextFieldProps = {
   onValueChange?: (value: string) => void
@@ -15,7 +15,7 @@ export type TextFieldProps = {
   label?: string
 } & ComponentPropsWithoutRef<'input'>
 
-export const Input = forwardRef<HTMLInputElement, TextFieldProps>(
+export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
   (
     {
       className,
