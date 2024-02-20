@@ -12,7 +12,7 @@ export type CheckboxProps = {
   onClickChanged?: (checked: boolean) => void
 }
 export const CheckBox = (props: CheckboxProps) => {
-  const { checked, className, disabled, label } = props
+  const { checked, onClickChanged, className, disabled, label } = props
   return (
     <form>
       <div className={s.container}>
@@ -22,6 +22,7 @@ export const CheckBox = (props: CheckboxProps) => {
               disabled={disabled}
               checked={checked}
               className={`${s.root} `}
+              onCheckedChange={onClickChanged}
               defaultChecked
               id="c1"
             >
