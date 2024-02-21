@@ -5,14 +5,15 @@ import Check from '@/svgs/check'
 import { Typography } from '@/components/typography'
 
 export type CheckboxProps = {
-  checked: boolean
+  checked?: boolean
   label?: ReactNode
   className?: string
   disabled?: boolean
-  onClickChanged?: (checked: boolean) => void
+  onChange?: (checked: boolean) => void
+  id?: string
 }
 export const CheckBox = (props: CheckboxProps) => {
-  const { checked, onClickChanged, className, disabled, label } = props
+  const { checked, onChange, className, disabled, label } = props
   return (
     <form>
       <div className={s.container}>
@@ -22,7 +23,7 @@ export const CheckBox = (props: CheckboxProps) => {
               disabled={disabled}
               checked={checked}
               className={`${s.root} `}
-              onCheckedChange={onClickChanged}
+              onCheckedChange={onChange}
               defaultChecked
               id="c1"
             >
