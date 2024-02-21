@@ -1,5 +1,5 @@
-import { useController, useForm } from 'react-hook-form'
-
+import { useForm } from 'react-hook-form'
+import { DevTool } from '@hookform/devtools'
 import { Button } from '../../ui/button'
 import { TextField } from '@/components/ui/textfield/textfield'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -21,15 +21,18 @@ export const LoginForm = () => {
   })
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <TextField {...register('email')} label={'email'} errorMessage={errors.email?.message} />
-      <TextField
-        {...register('password')}
-        label={'password'}
-        errorMessage={errors.password?.message}
-      />
-      <ControlledCheckbox label={'remember me'} control={control} name={'rememberMe'} />
-      <Button type="submit">Submit</Button>
-    </form>
+    <>
+      <DevTool control={control} />
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <TextField {...register('email')} label={'email'} errorMessage={errors.email?.message} />
+        <TextField
+          {...register('password')}
+          label={'password'}
+          errorMessage={errors.password?.message}
+        />
+        <ControlledCheckbox label={'remember me'} control={control} name={'rememberMe'} />
+        <Button type="submit">Submit</Button>
+      </form>
+    </>
   )
 }

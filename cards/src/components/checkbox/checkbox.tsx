@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 import * as Checkbox from '@radix-ui/react-checkbox'
 import s from './checkbox.module.scss'
 import Check from '@/svgs/check'
