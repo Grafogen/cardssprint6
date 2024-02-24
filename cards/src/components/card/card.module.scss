@@ -1,8 +1,12 @@
-.card{
+.root {
+  background-color: var(--color-dark-700);
+  border-radius: 2px;
+  box-shadow: 1px 1px 2px rgb(0 0 0 / 10%), -1px -1px 2px rgb(0 0 0 / 10%);
+}
+
+.login{
   width: 420px;
-  height: 552px;
-  background: linear-gradient(0deg, #171717, #171717),
-  linear-gradient(0deg, #313131, #313131);
-  border: 1px solid #313131;
-  box-shadow: 1px 1px 2px 0 #0000001A;
+  height: 528px;
+  display: flex;
+  justify-content: center;
 }

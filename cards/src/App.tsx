@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button'
 import { CheckBox } from '@/components/checkbox'
-import { Input } from '@/components/ui/textfield'
 
 export function App() {
   return (
@@ -9,7 +8,6 @@ export function App() {
         Hello
       </Button>
       <CheckBox checked={true} />
-      <Input />
     </div>
   )
 }
