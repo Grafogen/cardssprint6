@@ -1,5 +1,6 @@
 .card {
-  max-width: 413px;
+  max-width: 420px;
+  height: 528px;
   width: 100%;
   padding: 33px 36px 29px;
 }
@@ -7,10 +8,10 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  //gap: 24px;
 
   width: 100%;
-  margin-bottom: 12px;
+  //margin-bottom: 12px;
 }
 
 .checkbox {
@@ -18,8 +19,9 @@
 }
 
 .title {
+  display: flex;
   margin-bottom: 27px;
-  text-align: center;
+  justify-content: center;
 }
 
 .recoverPasswordLink,
@@ -40,9 +42,11 @@
 }
 
 .caption {
+  margin-top: 20px;
   margin-bottom: 11px;
   color: var(--color-light-900);
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .signUpLink {
