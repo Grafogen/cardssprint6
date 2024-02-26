@@ -1,26 +1,41 @@
 import { Card } from '@/components/card'
 import { Typography } from '@/components/typography'
-import s from './login.module.scss'
+import s from './signUp.module.scss'
 import { useForm } from 'react-hook-form'
-import { FormValues, loginSchema } from '@/components/auth/login-form/authTypes'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { TextField } from '@/components/ui/textfield/textfield'
-import { ControlledCheckbox } from '@/components/ui/controlled/controlled-checkbox/controlled-checkbox'
 import { Button } from '@/components/ui/button'
+import { z } from 'zod'
 
-type LoginProps = {
+type SignUpProps = {
   onSubmit?: () => void
 }
 
-export const Login = (props: LoginProps) => {
+export const loginSchema = z
+  .object({
+    email: z.string().email(),
+    password: z.string().min(3),
+    confirmPassword: z.string().min(3),
+  })
+  .superRefine((data, ctx) => {
+    if (data.confirmPassword != data.password) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: 'Password is not the same',
+        path: ['confirmPassword'],
+      })
+    }
+  })
+
+export type FormValues = z.infer<typeof loginSchema>
+
+export const SignUp = (props: SignUpProps) => {
   const onSubmit = (data: FormValues) => {
     console.log(data)
   }
-
   const {
     register,
     handleSubmit,
-    control,
     formState: { errors },
   } = useForm<FormValues>({
     resolver: zodResolver(loginSchema),
@@ -38,14 +53,13 @@ export const Login = (props: LoginProps) => {
             errorMessage={errors.password?.message}
             type="password"
           />
+          <TextField
+            {...register('confirmPassword')}
+            label={'Confirm Password'}
+            errorMessage={errors.confirmPassword?.message}
+            type="password"
+          />
         </div>
-        <ControlledCheckbox
-          label={'Remember me'}
-          control={control}
-          name={'rememberMe'}
-          className={s.checkbox}
-        />
-        <Typography children="Forgot password?" variant="body2" className={s.recoverPasswordLink} />
         <Button type="submit" fullWidth className={s.button}>
           Sign in
         </Button>
