@@ -43,7 +43,7 @@ export const SignUp = (props: SignUpProps) => {
 
   return (
     <Card className={s.card}>
-      <Typography variant="h1" children="Sign In" className={s.title} />
+      <Typography variant="h1" children="Sign Up" className={s.title} />
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className={s.form}>
           <TextField {...register('email')} label={'Email'} errorMessage={errors.email?.message} />
@@ -61,11 +61,11 @@ export const SignUp = (props: SignUpProps) => {
           />
         </div>
         <Button type="submit" fullWidth className={s.button}>
-          Sign in
+          Sign up
         </Button>
       </form>
-      <Typography variant="body2" children="Don't have an account?" className={s.caption} />
-      <Typography variant="link1" children="Sign up" className={s.signUpLink} />
+      <Typography variant="body2" children="Already have an account?" className={s.caption} />
+      <Typography variant="link1" children="Sign In" className={s.signUpLink} />
     </Card>
   )
 }

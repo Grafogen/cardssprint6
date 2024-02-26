@@ -1,0 +1,29 @@
+.card {
+  max-width: 420px;
+  height: 408px;
+  width: 100%;
+  padding: 33px 36px 29px;
+}
+.picture{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 19px;
+}
+.title {
+  display: flex;
+  margin-bottom: 27px;
+  justify-content: center;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+
+.ps{
+  margin-bottom: 65px;
+  color: var(--color-dark-100);
+  text-align: center;
+  opacity: 0.5;
+}
