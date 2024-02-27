@@ -5,6 +5,7 @@ import { Typography } from '@/components/typography'
 import { Button } from '@/components/ui/button'
 import LogOut from '@/svgs/logOut'
 import EditCamera from '@/svgs/editCamera'
+import Edit from '@/svgs/edit'
 
 type EditProfileProps = {
   avatar?: string
@@ -25,7 +26,13 @@ export const PersonalInfo = ({ avatar, nickName, email }: EditProfileProps) => {
             </button>
           </div>
         </div>
-        <Typography children={nickName} variant={'h2'} className={s.title} />
+        <div className={s.nameWithEditButton}>
+          <Typography children={nickName} variant={'h2'} className={s.title} />
+
+          <button className={s.editNameButton}>
+            <Edit />
+          </button>
+        </div>
         <Typography children={email} variant={'body2'} className={s.email} />
         <div className={s.wrap}>
           <Button className={s.button} variant={'secondary'} type={'submit'}>
