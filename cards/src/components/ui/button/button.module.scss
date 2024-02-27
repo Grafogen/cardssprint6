@@ -48,10 +48,9 @@
 
 
 .secondary {
+  @include button;
   background-color: var(--color-dark-300);
   box-shadow: 0px 4px 4px 0px #4D566021;
-  width: 169px;
-  height: 36px;
   padding: 6px 28px;
   gap: 10px;
   border-radius: 4px;

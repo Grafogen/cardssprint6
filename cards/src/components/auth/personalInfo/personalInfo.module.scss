@@ -1,22 +1,23 @@
 .card {
   max-width: 420px;
-  height: 420px;
+  height: 348px;
   width: 100%;
   padding: 33px 36px 29px;
   display: flex;
   flex-direction: column;
 }
 
-.picture{
+//.picture{
+//  display: flex;
+//  justify-content: center;
+//  border-radius: 50%;
+//  margin-bottom: 19px;
+//  margin-top: 27px;
+//}
+.wrap{
   display: flex;
   justify-content: center;
-  border-radius: 50%;
-  margin-bottom: 19px;
-  margin-top: 27px;
-}
-.button{
-  display: flex;
-  justify-content: center;
+  margin-top: 13px;
 }
 .title {
   display: flex;
@@ -24,6 +25,57 @@
   justify-content: center;
 }
 
+.email {
+  display: flex;
+  text-align: center;
+  color: var(--color-dark-100);
+  justify-content: center;
+}
+.photoContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 27px;
+  margin-bottom: 6px;
+
+  > div {
+    position: relative;
+
+    > img {
+      width: 96px;
+      height: 96px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    > .editAvatarButton {
+      all: unset;
+
+      cursor: pointer;
+
+      position: absolute;
+      right: 16px;
+      bottom: 22px;
+
+      width: 16px;
+      height: 16px;
+
+      &:focus-visible {
+        outline: var(--outline-focus);
+      }
+    }
+  }
+}
+
+
+.iconLog{
+  margin-top: 3px;
+  margin-right: 5px;
+}
+
 .button {
-  margin-top: 36px;
+  display: flex;
+  justify-content: center;
+  width: 122px;
+  height: 36px;
 }

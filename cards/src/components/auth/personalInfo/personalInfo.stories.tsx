@@ -13,5 +13,6 @@ export const Primary: Story = {
   args: {
     avatar: avatar,
     nickName: 'Joe',
+    email: 'j&johnson@gmail.com',
   },
 }
